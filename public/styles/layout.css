@@ -32,3 +32,9 @@ div {
   justify-content: center;
   align-items: center;
 }
+
+main {
+  width: 90%;
+  background-color: #f4f1ec;
+  margin: auto;
+}
