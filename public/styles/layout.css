@@ -23,3 +23,38 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+body {
+  font-family: "Source Sans 3", "sans-serif";
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  font-family: "bungee","sans-serif";
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav.container {
+  flex-direction: column;
+}
+
+.fa-solid.fa-angles-down {
+  color: #D60303;
+}
+
+#logo {
+  font-size: 48px;
+}
