@@ -1,0 +1,38 @@
+/* class="new-tweet">
+id="tweet-text"
+class="counter"  */
+
+.new-tweet div {
+  justify-content: space-between;
+  font-family: "bungee","sans-serif";
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0.3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: none;
+}
+
+.new-tweet label {
+  font-weight: 600;
+  font-size: larger;
+}
+
+#tweet-text {
+  font-weight: 600;
+  color: #6a6a6a;
+  overflow: auto;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  width: 100%;
+  border-bottom: solid;
+  border-bottom-width: thick;
+  border-color: #6a6a6a;
+  outline: none;
+  height: 2em;
+  line-height: 1em;
+}
