@@ -1,6 +1,8 @@
+/*
+ * jQuery is already loaded
+ * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ */
 $(document).ready(function() {
-  console.log("js is ready")
-
   $("#tweet-text").on('input', function() {
     const charLeft = 140 - $(this).val().length;
     const counter = $(this).parents('form').find('output');
