@@ -1,7 +1,3 @@
-/* class="new-tweet">
-id="tweet-text"
-class="counter"  */
-
 .new-tweet div {
   justify-content: space-between;
   font-family: "bungee","sans-serif";
@@ -24,7 +20,6 @@ class="counter"  */
 #tweet-text {
   font-weight: 600;
   color: #6a6a6a;
-  overflow: auto;
   background-color: transparent;
   border: none;
   resize: none;
@@ -35,4 +30,8 @@ class="counter"  */
   outline: none;
   height: 2em;
   line-height: 1em;
+}
+
+.new-tweet .negative {
+  color: #D60303;
 }
