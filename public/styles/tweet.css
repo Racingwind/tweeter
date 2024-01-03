@@ -4,6 +4,7 @@ article.tweet {
   border-style: solid;
   padding: 0.5em;
   margin-top: 2em;
+  margin-bottom: 2em;
   border-width: 0.2em;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,8 @@ article.tweet:hover {
 
 article.tweet header {
   padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   height: 1em;
   width: 100%;
   display: flex;
@@ -22,6 +25,12 @@ article.tweet header {
   align-items: center;
   background-image: none;
   background-color: transparent;
+}
+
+article.tweet header img {
+  width: 2em;
+  height: 2em;
+  margin-right: 0.5em;
 }
 
 article.tweet .handle {
