@@ -16,10 +16,10 @@ nav {
   flex-direction: column;
 }
 
-nav .fa-solid.fa-angles-down {
-  color: #D60303;
-}
-
 nav #logo {
   font-size: 48px;
+}
+
+nav .fa-solid.fa-angles-down {
+  color: #D60303;
 }

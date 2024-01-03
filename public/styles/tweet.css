@@ -1,14 +1,3 @@
-article.tweet header {
-  padding: 0.5em;
-  height: 1em;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: none;
-  background-color: transparent;
-}
-
 article.tweet {
   font-weight: 600;
   border-color: #464646;
@@ -24,12 +13,19 @@ article.tweet:hover {
   box-shadow: 0.25em 0.25em #cdd4f7;
 }
 
-article.tweet footer {
-  font-size: 0.75em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+article.tweet header {
   padding: 0.5em;
+  height: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: none;
+  background-color: transparent;
+}
+
+article.tweet .handle {
+  color: #b3bef3;
 }
 
 article.tweet .content {
@@ -41,13 +37,17 @@ article.tweet .content {
   padding: 0.75em;
 }
 
+article.tweet footer {
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
 article.tweet .tweet-icons {
   justify-content: space-between;
   width: 8%;
-}
-
-article.tweet .handle {
-  color: #b3bef3;
 }
 
 .fa-flag:hover {

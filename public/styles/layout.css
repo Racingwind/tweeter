@@ -27,14 +27,14 @@ body {
   font-family: "Source Sans 3", "sans-serif";
 }
 
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
   width: 90%;
   background-color: #f4f1ec;
   margin: auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
