@@ -19,17 +19,18 @@
 
 #tweet-text {
   font-weight: 600;
-  color: #6a6a6a;
+  color: #464646;
   background-color: transparent;
   border: none;
   resize: none;
   width: 100%;
   border-bottom: solid;
   border-bottom-width: thick;
-  border-color: #6a6a6a;
+  border-color: #464646;
   outline: none;
   height: 2em;
   line-height: 1em;
+  margin-bottom: 0.5em;
 }
 
 .new-tweet .negative {
