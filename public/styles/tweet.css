@@ -18,6 +18,9 @@ article.tweet {
   border-width: 0.2em;
   display: flex;
   flex-direction: column;
+}
+
+article.tweet:hover {
   box-shadow: 0.25em 0.25em #cdd4f7;
 }
 
@@ -41,6 +44,10 @@ article.tweet .content {
 article.tweet .tweet-icons {
   justify-content: space-between;
   width: 8%;
+}
+
+article.tweet .handle {
+  color: #b3bef3;
 }
 
 .fa-flag:hover {
