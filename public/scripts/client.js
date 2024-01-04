@@ -42,12 +42,19 @@ $(document).ready(function() {
   // Listen for form submit and prevent default actions
   $('form').submit(function(event) {
     event.preventDefault();
-    
-    const $formData = $(this).serialize();
-    $.ajax('/tweets', { 
-      method: 'POST',
-      data: $formData
-    });
+    const tweetContent = $(this.text).val();
+    if (!tweetContent) {
+      alert('Error: Tweet content is empty!');
+    }
+    else if (tweetContent.length > 140) {
+      alert('Error: Tweet exceeds maximum length');
+    } else {
+      const $formData = $(this).serialize();
+      $.ajax('/tweets', { 
+        method: 'POST',
+        data: $formData
+      });
+    }
   });
 
 
@@ -61,3 +68,20 @@ $(document).ready(function() {
 
   loadTweets();
 });
+
+
+// const $formData = $(this).serialize();
+
+// // Extract the tweet content from the serialized data
+// const tweetContent = $(this).find('textarea[name="text"]').val();
+
+// // Check if the tweet content is too long or not present
+// if (!tweetContent || tweetContent.length > 280) {
+//   // Display an error message to the user
+//   if (!tweetContent) {
+//     alert('Error: Tweet content is not present. Please enter a tweet.');
+//   } else {
+//     alert('Error: Tweet content is too long. Please limit to 280 characters.');
+//   }
+// } else {
+//   // Make an AJAX POST request only if the tweet content is valid
