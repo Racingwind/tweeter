@@ -45,20 +45,17 @@ $(document).ready(function() {
     event.preventDefault();
     
     const $formData = $(this).serialize();
-    console.log('Button clicked, performing ajax call...');
-    console.log(`Data: ${$formData}`);
     $.ajax('/tweets', { 
       method: 'POST',
       data: $formData
     });
   });
-  
+
 
   // function to load tweets from server
   const loadTweets = () => {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
     .then(function (data) {
-      console.log(data);
       renderTweets(data);
     });
   };
