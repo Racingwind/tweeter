@@ -29,14 +29,16 @@ $(document).ready(function() {
   };
 
 
-  // function to take an array of tweets and create a list of tweets and add it to the current web page
+  // function to take a data set of tweets and create a list of tweets and add it to the current web page
   const renderTweets = (tweets) => {
-    tweets.forEach(element => {
-      $('#tweets-container').append(createTweetElement(element));
-    });
+    if (Array.isArray(tweets)) {
+      tweets.forEach(element => {
+        $('#tweets-container').append(createTweetElement(element));
+      });
+    } else {
+      $('#tweets-container').append(createTweetElement(tweets));
+    }
   };
-
-  // renderTweets(data);
 
 
   // Listen for form submit and prevent default actions
@@ -54,16 +56,22 @@ $(document).ready(function() {
         method: 'POST',
         data: $formData
       });
-      $(this.text).val(''); // clear text box after submission
+      // clear tweet form text box and reload tweets after submission confirmation
+      $(this.text).val('');
+      loadTweets('latest'); //pass it 'latest' to only render the latest tweet
     }
   });
 
 
   // function to load tweets from server
-  const loadTweets = () => {
+  const loadTweets = (type) => {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
     .then(function (data) {
-      renderTweets(data);
+      if (type === 'latest') {
+        renderTweets(data[data.length - 1]);
+      } else {
+        renderTweets(data);
+      }
     });
   };
 
