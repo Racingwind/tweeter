@@ -4,9 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  // function to escape untrusted text
+  const escape = (str) => {
+    document.createTextNode
+  }
+  
   // function to create a tweet article element
   const createTweetElement = (data) => {
     const timeSinceTweeted = timeago.format(data.created_at);
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(data.content.text));
+    const safeText = div.innerHTML;
     return `<article class="tweet">
       <header>
         <div>
@@ -15,7 +23,7 @@ $(document).ready(function() {
         </div>
         <div class="handle">${data.user.handle}</div>
       </header>
-      <div class="content">${data.content.text}</div>
+      <div class="content">${safeText}</div>
       <footer>
         <div>${timeSinceTweeted}</div>
         <div class="tweet-icons">
