@@ -54,7 +54,7 @@ $(document).ready(function() {
         method: 'POST',
         data: $formData
       });
-      $(this.text).val('');
+      $(this.text).val(''); // clear text box after submission
     }
   });
 

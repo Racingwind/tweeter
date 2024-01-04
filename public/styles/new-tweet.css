@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-bottom: 2em;
+}
+
 .new-tweet div {
   justify-content: space-between;
   font-family: "bungee","sans-serif";

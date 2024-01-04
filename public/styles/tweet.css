@@ -3,8 +3,7 @@ article.tweet {
   border-color: #464646;
   border-style: solid;
   padding: 0.5em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   border-width: 0.2em;
   display: flex;
   flex-direction: column;

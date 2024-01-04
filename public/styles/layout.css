@@ -38,3 +38,8 @@ div {
   justify-content: center;
   align-items: center;
 }
+
+#tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
