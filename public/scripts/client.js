@@ -53,20 +53,21 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const tweetContent = $(this.text).val();
+    const errorMsg = $('.error-message');
     if (!tweetContent) {
-      alert('Error: Tweet content is empty!');
+      errorMsg.text('Error: Tweet content is empty!').slideDown();
     }
     else if (tweetContent.length > 140) {
-      alert('Error: Tweet exceeds maximum length');
+      errorMsg.text('Error: Tweet exceeds maximum length!').slideDown();
     } else {
+      errorMsg.slideUp();
       const $formData = $(this).serialize();
-      $.ajax('/tweets', { 
-        method: 'POST',
-        data: $formData
-      });
-      // clear tweet form text box and reload tweets after submission confirmation
-      $(this.text).val('');
-      loadTweets('latest'); //pass it 'latest' to only render the latest tweet
+      $.ajax('/tweets', { method: 'POST', data: $formData })
+      .then (function () {
+        // clear tweet form text box and reload tweets after submission confirmation
+        $(this.text).val('');
+        loadTweets('latest'); //pass it 'latest' to only render the latest tweet
+      });      
     }
   });
 
