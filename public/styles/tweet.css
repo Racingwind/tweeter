@@ -43,6 +43,7 @@ article.tweet .content {
   border-color: #464646;
   justify-content: flex-start;
   padding: 0.75em;
+  word-break: break-all;
 }
 
 article.tweet footer {
