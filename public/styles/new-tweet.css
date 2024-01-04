@@ -36,3 +36,6 @@
   padding-right: 0.5em;
   border: none;
 }
+
+.new-tweet button:hover {
+  box-shadow: 0 0 0 0.2em#6076e2;}
