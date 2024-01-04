@@ -6,8 +6,7 @@
 $(document).ready(function() {
   // function to create a tweet article element
   const createTweetElement = (data) => {
-    const difference = Date.now() - data.created_at;
-    const days = Math.floor(difference / 1000 / 86400);
+    const timeSinceTweeted = timeago.format(data.created_at);
     return `<article class="tweet">
       <header>
         <div>
@@ -18,7 +17,7 @@ $(document).ready(function() {
       </header>
       <div class="content">${data.content.text}</div>
       <footer>
-        <div>${days} days ago</div>
+        <div>${timeSinceTweeted}</div>
         <div class="tweet-icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
