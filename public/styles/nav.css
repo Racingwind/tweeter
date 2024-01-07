@@ -11,7 +11,7 @@ nav {
   align-items: center;
 }
 
-.nav.container {
+nav .container {
   flex-direction: column;
 }
 

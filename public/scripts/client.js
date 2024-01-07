@@ -13,7 +13,7 @@ $(document).ready(function() {
     const safeText = div.innerHTML;
     return `<article class="tweet">
       <header>
-        <div>
+        <div class="username">
         <img src="${data.user.avatars}">
           ${data.user.name}
         </div>

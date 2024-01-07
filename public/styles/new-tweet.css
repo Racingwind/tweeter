@@ -21,7 +21,7 @@
   resize: none;
   width: 100%;
   border-bottom: solid;
-  border-bottom-width: thick;
+  border-bottom-width: 0.15em;
   border-color: #464646;
   outline: none;
   height: 2.3em;

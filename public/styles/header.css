@@ -8,8 +8,17 @@ header {
   background-color: #b78b36;
 }
 
-.header.container {
+header .container {
   flex-direction: column;
+  color:#FFFFFF;
+}
+
+header .first-name {
+  padding-right: 0.5em;
+}
+
+header .last-name {
+  font-weight: 300;;
 }
 
 /* Desktop styles */
