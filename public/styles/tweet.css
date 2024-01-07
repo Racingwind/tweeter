@@ -56,7 +56,7 @@ article.tweet footer {
 
 article.tweet .tweet-icons {
   justify-content: space-between;
-  width: 8%;
+  width: 80px;
 }
 
 .fa-flag:hover {
