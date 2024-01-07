@@ -66,8 +66,8 @@ $(document).ready(function() {
       .then (function () {
         // clear tweet form text box and reload tweets after submission confirmation
         $(this.text).val('');
-        loadTweets('latest'); //pass it 'latest' to only render the latest tweet
-      });      
+        loadTweets('latest'); // pass it 'latest' to only render the latest tweet
+      }.bind(this)); // need to pass the context of 'this' (the form)
     }
   });
 
