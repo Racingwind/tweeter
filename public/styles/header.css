@@ -15,7 +15,7 @@ header {
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   header {
-    height: 380px;
+    height: 400px;
     margin-top: 250px;
     background-clip: content-box;
     padding-left: 2em;
