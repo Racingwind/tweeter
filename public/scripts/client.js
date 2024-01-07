@@ -4,10 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  // function to escape untrusted text
-  const escape = (str) => {
-    document.createTextNode
-  }
   
   // function to create a tweet article element
   const createTweetElement = (data) => {
