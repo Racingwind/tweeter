@@ -9,7 +9,10 @@ This project combines skills such as HTML, CSS, JS, JQuery and AJAX. It also req
 - Creating new tweets will automatically update the page without reloading using AJAX done via jquery.
 
 ## Screenshots
+Desktop layout
 !["Screenshot of desktop layout](https://github.com/Racingwind/tweeter/blob/master/docs/desktop.PNG?raw=true)
+
+Mobile layout
 !["Screenshot of desktop layout](https://github.com/Racingwind/tweeter/blob/master/docs/mobile.PNG?raw=true)
 
 ## Getting Started
