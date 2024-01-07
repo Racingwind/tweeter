@@ -4,9 +4,13 @@ Tweeter is a simple, single-page Twitter clone.
 
 This project combines skills such as HTML, CSS, JS, JQuery and AJAX. It also requires the use of linking various different contents provided by CDNs such as font, background image, and JS.
 
-Features
+## Features
 - The page utilizes responsive web design to dynamically change the layout of the page using CSS.
 - Creating new tweets will automatically update the page without reloading using AJAX done via jquery.
+
+## Screenshots
+!["Screenshot of desktop layout](https://github.com/Racingwind/tweeter/blob/master/docs/desktop.PNG?raw=true)
+!["Screenshot of desktop layout](https://github.com/Racingwind/tweeter/blob/master/docs/mobile.PNG?raw=true)
 
 ## Getting Started
 
