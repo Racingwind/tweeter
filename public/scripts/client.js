@@ -8,6 +8,7 @@ $(document).ready(function() {
   // function to create a tweet article element
   const createTweetElement = (data) => {
     const timeSinceTweeted = timeago.format(data.created_at);
+    // escape the tweet text and make it "safe"
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(data.content.text));
     const safeText = div.innerHTML;
@@ -60,8 +61,9 @@ $(document).ready(function() {
       const $formData = $(this).serialize();
       $.ajax('/tweets', { method: 'POST', data: $formData })
       .then (function () {
-        // clear tweet form text box and reload tweets after submission confirmation
-        $(this.text).val('');
+        // clear tweet form text box, reset character counter and reload tweets after submission confirmation
+        $(this.text).val(''); // clear tweet box
+        $(this).find('output').text('140'); // traverse DOM tree to reset counter
         loadTweets('latest'); // pass it 'latest' to only render the latest tweet
       }.bind(this)); // need to pass the context of 'this' (the form)
     }
@@ -70,7 +72,7 @@ $(document).ready(function() {
 
   // function to load tweets from server
   const loadTweets = (type) => {
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    $.ajax('/tweets', { method: 'GET' })
     .then(function (data) {
       if (type === 'latest') {
         renderTweets(data[data.length - 1]);
