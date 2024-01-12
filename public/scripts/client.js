@@ -65,7 +65,11 @@ $(document).ready(function() {
         $(this.text).val(''); // clear tweet box
         $(this).find('output').text('140'); // traverse DOM tree to reset counter
         loadTweets('latest'); // pass it 'latest' to only render the latest tweet
-      }.bind(this)); // need to pass the context of 'this' (the form)
+      }.bind(this)) // need to pass the context of 'this' (the form)
+      .catch(function (error) {
+        errorMsg.text('Error: failed to load tweets. Please try refreshing the page').slideDown();
+        console.log(`Error loading tweets: ${error}`);
+      });
     }
   });
 
@@ -79,6 +83,11 @@ $(document).ready(function() {
       } else {
         renderTweets(data);
       }
+    })
+    .catch(function (error) {
+      const errorMsg = $('.error-message');
+      errorMsg.text('Error: failed to load tweets. Please try refreshing the page').slideDown();
+      console.log(`Error loading tweets: ${error}`);
     });
   };
 
